@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, redirect
 from .models import Profile
+from .forms import ProfileForm
 
 
 # Create your views here.
