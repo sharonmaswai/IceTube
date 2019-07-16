@@ -7,6 +7,10 @@ from .forms import ProfileForm, RateForm
 
 
 # Create your views here.
+
+def home(request):
+    return render(request, 'home/index.html')
+
 def create_profile(request):
     current_user = request.user
     if request.method == 'POST':
@@ -81,3 +85,4 @@ def rate_officer(request,profile_id):
         mean_rate=total_rating  
     
     return render(request, 'profile.html',{'profiles':profiles,'mean_rate':mean_rate})
+
