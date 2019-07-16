@@ -8,8 +8,8 @@ urlpatterns=[
     
     
     url(r'^newprofile/', views.create_profile, name='profile-form'),
-    url(r'^profile/$', views.profile, name='profile'),
-    url(r'^rate_project/(\d+)/', views.rate_project, name='rate_project'),
+    url(r'^profile/(\d+)/', views.profile, name='profile'),
+    #url(r'^rate_project', views.rate_project, name='rate_project'),
     url(r'^rate_form/(\d+)/',views.rate, name='rateform'),
 ]
 if settings.DEBUG:

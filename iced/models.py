@@ -23,7 +23,7 @@ class Profile(models.Model):
         return self.name
 class Rating(models.Model):
    
-    rate = models.PositiveIntegerField(default=0,validators=[MaxValueValidator(10)]) 
+    rating = models.PositiveIntegerField(default=0,validators=[MaxValueValidator(10)]) 
     user = models.ForeignKey(User,on_delete=models.CASCADE,null=True)
     officer = models.ForeignKey(Profile,on_delete=models.CASCADE,null=True)
     average_vote=models.FloatField(default=0)
