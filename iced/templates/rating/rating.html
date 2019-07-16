@@ -1,0 +1,31 @@
+{% extends 'rating/base.html' %}
+{% load bootstrap4%}
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-6">
+        <div class="card card-cascade  wider text-center">
+            <div class="card-body card-body-cascade ">
+                    <div class="jumbotron">
+                            <p class="text-center">Rate the Extension Officer</p>
+                            {{profile.id}}
+                           
+                    </div>
+                <form action="{% url 'rateform' profile.id %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+        
+                        <div class=" form-group">
+                    <input type="submit" class="btn btn-dark btn-md text-center" value="Upload"
+                        style="text-align:center;">
+            </div>
+            {{form.media}}
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{%endblock%}
