@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap4',
     'iced',
     'bootstrap4',
     
@@ -81,8 +82,9 @@ DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ice',
-        'USER': 'mitch',
-    'PASSWORD':'qwertyuiop',
+        'USER': 'sharon-maswai',
+    'PASSWORD':'qwert',
+
     }
 }
 
