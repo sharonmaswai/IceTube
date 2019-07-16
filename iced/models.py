@@ -12,7 +12,7 @@ class Profile(models.Model):
     name=models.CharField(max_length=30)
     user = models.OneToOneField(User,on_delete=models.CASCADE,null=True,blank=True)
     bio = HTMLField(max_length=500,default='About me')
-    task= IntergerField()
+    task= models.IntegerField()
 
     def save_profile(self):
         self.save()
