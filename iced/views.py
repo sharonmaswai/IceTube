@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+def home(request):
+    return render(request, 'home/index.html')
 
 @login_required(login_url='/accounts/login/')
 def dummy(request):
@@ -16,8 +18,7 @@ from .forms import ProfileForm, RateForm
 
 # Create your views here.
 
-def home(request):
-    return render(request, 'home/index.html')
+
 
 def create_profile(request):
     current_user = request.user

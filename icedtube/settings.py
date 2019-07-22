@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'iced',
-    'bootstrap4',
-    
 ]
 
 MIDDLEWARE = [
@@ -82,8 +80,8 @@ DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ice',
-        'USER': 'sharon-maswai',
-    'PASSWORD':'qwert',
+        'USER': 'mitch',
+    'PASSWORD':'qwertyuiop',
 
     }
 }
