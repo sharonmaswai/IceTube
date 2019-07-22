@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'iced',
-    'bootstrap4',
+    'chat',
+    'channels',
+   
     
 ]
 
