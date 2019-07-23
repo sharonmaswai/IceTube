@@ -75,6 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'icedtube.wsgi.application'
+ASGI_APPLICATION = "icedtube.routing.application"
 
 
 # Database
