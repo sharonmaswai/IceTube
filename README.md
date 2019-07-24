@@ -7,5 +7,33 @@
 ### Installation.
 
 * 
+### Setup Requirements
+
+* 
+
+### Known Bugs
+
+* 
 
 ### BDD
+
+### Technologies Used
+You need the following to work on the project:
+
+* python - 3.6
+
+* django - 1.11
+
+* pip
+
+* virtual environment
+
+* A text-editor
+
+### Prerequisites
+
+* 
+
+### License
+
+* 
