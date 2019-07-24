@@ -49,7 +49,7 @@ from asgiref.sync import async_to_sync
 from channels.generic.websocket import WebsocketConsumer
 import json
 from .models import Message, Chat, Contact
-from .views import get_last_10_messages, get_user_contact, get_current_chat
+from .views import get_last_12_messages, get_user_contact, get_current_chat
 
 User = get_user_model()
 
