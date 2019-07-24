@@ -17,12 +17,11 @@
    
 </body>
 
-<script src="{% static 'reconnecting.js' %}"></script>
+
 <script>
     var roomName = {{ room_name_json }};
-    var userName = {{ username }};
-
-    var chatSocket = new ReconnectingWebSocket(
+  
+    var chatSocket = new WebSocket(
         'ws://' + window.location.host +
         '/ws/chat/' + roomName + '/');
 
