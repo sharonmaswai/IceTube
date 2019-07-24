@@ -1,3 +1,5 @@
+{% extends 'chat/base.html' %}
+
 {% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
@@ -16,12 +18,12 @@
     
    
 </body>
-
+<script src="{% static 'reconnecting-websocket.js'  %}"></script>
 
 <script>
     var roomName = {{ room_name_json }};
   
-    var chatSocket = new WebSocket(
+    var chatSocket = new ReconnectingWebSocket(
         'ws://' + window.location.host +
         '/ws/chat/' + roomName + '/');
 

@@ -22,7 +22,7 @@ class ChatConsumer(WebsocketConsumer):
            'command': 'new_message',
            'message': self.message_to_json(message)
        }
-        return self.send_chat_message(content)
+       return self.send_chat_message(content)
     def messages_to_json(self, messages ):    
         result=[]
         for message in messages: 
@@ -30,7 +30,7 @@ class ChatConsumer(WebsocketConsumer):
         return result
     def message_to_json(self, message ) :  
         return{
-            'author':message.author.username
+            'author':message.author.username,
             'content':message.content,
             'timesent':str(message.timesent)  
              
@@ -38,7 +38,7 @@ class ChatConsumer(WebsocketConsumer):
     }  
     
     commands = {
-        'fetch_messages': fetch_messages
+        'fetch_messages': fetch_messages,
         'new_message':new_message
     } 
     
