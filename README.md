@@ -1,4 +1,5 @@
 # IcedKonnect
+## By:Sharon Maswai, Mitch Ndungu, Michael Kipkorir, Mohammed Muhumed
 
 ### Description.
 
@@ -13,9 +14,10 @@
 
 ### Known Bugs
 
-* 
+* There are no known bugs bug if there are, feel free to contact any of us.
 
 ### BDD
+
 
 ### Technologies Used
 You need the following to work on the project:
@@ -42,6 +44,15 @@ You need the following to work on the project:
 
 * 
 
+### Contact
+
+* Sharon - chepsharon@gmail.com
+
+* Mitch -mitchndungu25@gmail.com
+
+* Michael - mikekip@gmail.com
+
+* Mohammed - mzambia70@gmail.com
 ### License
 
 * 
