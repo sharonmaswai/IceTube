@@ -1,23 +1,42 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
 from django.shortcuts import render
-from pympesa import Pympesa
-import pympesa
+from django.http import HttpResponse, JsonResponse
+from django.views.generic import View
+from django_daraja.mpesa.core import *
+from decouple import config
+from datetime import datetime
+cl = MpesaClient()
 
-# Create your views here.
+def index(request):
 
-response = pympesa.oauth_generate_token(
-   '''DRq4b3D5tNWw4Q3uUUiYQLCgabKNlZir,bDnSilPbQIidgcrM
-).json() '''
-"access_token"=response.get("x0Bng5LDe75F6G8grgm1AwSwOdJ3")
+	return HttpResponse('Welcome to the home of daraja APIs')
 
-mpesa_client.lipa_na_mpesa_online_payment(
-    BusinessShortCode="600000",
-    Password="xxxxx_yyyy_zzz",
-    TransactionType="CustomerPayBillOnline",
-    Amount="100",
-    PartyA="254708374149",
-    PartyB="600000",
-    PhoneNumber="254708374149",
-    CallBackURL="https://your-app/callback",
-    AccountReference="ref-001",
-    TransactionDesc="desc-001"
-    )
+def oauth_success(request):
+	r = cl.access_token()
+	return JsonResponse(r, safe=False)
+
+def stk_push_success(request):
+	phone_number = config('LNM_PHONE_NUMBER')
+	amount = '1'
+	account_reference = 'ABC001'
+	transaction_desc = 'Description'
+	callback_url = 'https://darajambili.herokuapp.com/express-payment'
+	r = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
+	return JsonResponse(r.response_description, safe=False)
+
+def index(request):
+    cl = MpesaClient()
+    # Use a Safaricom phone number that you have access to, for you to be able to view the prompt.
+    phone_number = '0724869317'
+    amount = 1
+    account_reference = 'reference'
+    transaction_desc = 'Description'
+    callback_url = 'https://darajambili.herokuapp.com/express-payment'
+    response = cl.stk_push(phone_number, amount, account_reference, transaction_desc, callback_url)
+    return HttpResponse(response.text)
+
+def stk_push_callback(request):
+        data = request.body
+        # You can do whatever you want with the notification received from MPESA here.
