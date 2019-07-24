@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'iced',
+
+    'chat',
+    'channels',
+   
+
 ]
 
 MIDDLEWARE = [
@@ -71,6 +76,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'icedtube.wsgi.application'
+ASGI_APPLICATION = "icedtube.routing.application"
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 
 # Database
@@ -80,8 +94,8 @@ DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ice',
-        'USER': 'mitch',
-    'PASSWORD':'qwertyuiop',
+        'USER': 'sharon-maswai',
+    'PASSWORD':'qwerty',
 
     }
 }
