@@ -12,7 +12,7 @@ class Contact(models.Model):
     def __str__(self):
         return self.user.username
 class Message(models.Model):
-    author=models.ForeignKey(Contact, related_name='author_message', on_delete=models.CASCADE)
+    author=models.ForeignKey(User, related_name='author_message', on_delete=models.CASCADE)
     content=models.TextField()
     timesent=models.DateTimeField(auto_now_add=True)
 
