@@ -30,6 +30,14 @@ You need the following to work on the project:
 
 * A text-editor
 
+* django-channels - 2
+
+* reddis
+
+* RASA
+
+* daraja api
+
 ### Prerequisites
 
 * 
