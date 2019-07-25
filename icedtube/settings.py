@@ -165,7 +165,7 @@ MPESA_SHORTCODE_TYPE = 'paybill'
 # Lipa na MPESA Online passkey
 # Sandbox passkey is available on test credentials page
 # Production passkey is sent via email once you go live
-ACCESS_TOKEN='aKWFJ05B7ERn4dTwYFfrFTvGNX9D'
+ACCESS_TOKEN='hmmCNEAcPVJ2VgZ92FGKAkw9iNPT'
 MPESA_PASSKEY = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
 
 
