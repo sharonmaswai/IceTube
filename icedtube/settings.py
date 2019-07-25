@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     #'django-daraja',
     'pympesa',
     'payments',
-    
+    'chat',
+    'channels',    
 ]
 
 MIDDLEWARE = [
@@ -78,6 +79,15 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'icedtube.wsgi.application'
+ASGI_APPLICATION = "icedtube.routing.application"
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
 
 
 # Database
@@ -131,6 +141,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+
+]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -169,3 +183,5 @@ ACCESS_TOKEN='hmmCNEAcPVJ2VgZ92FGKAkw9iNPT'
 MPESA_PASSKEY = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919'
 
 
+
+LOGIN_REDIRECT_URL = '/home/'
