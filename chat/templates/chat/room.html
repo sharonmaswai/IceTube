@@ -1,8 +1,7 @@
-{% extends 'chat/base.html' %}
+
 
 {% load bootstrap4 %}
 {% load static %}
-{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,7 +91,7 @@
      
       
     </div></div>
-    </body>
+   
     
 <script src="{% static 'reconnecting-websocket.js'  %}"></script>
 
@@ -123,7 +122,7 @@
         msgs.appendChild(imgTag);
         msgs.appendChild(pTag);
         document.querySelector('#chat-log').appendChild(msgs);
-
+    };
     chatSocket.onclose = function(e) {
         console.error('Chat socket closed unexpectedly');
     };
@@ -145,6 +144,6 @@
 
         messageInputDom.value = '';
     };
-</scrip t>
+    </script>
+</body>
 </html>
-{% endblock %}
