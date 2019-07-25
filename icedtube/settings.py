@@ -42,12 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'iced',
-    'django_daraja',
     'chat',
     'channels',
-   
+    'rest_framework',
+    'django_daraja',
+
 
 ]
+SITE_ID=1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,8 +99,10 @@ DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ice',
-        'USER': 'mitch',
-    'PASSWORD':'qwertyuiop',
+
+        'USER': 'sharon-maswai',
+    'PASSWORD':'qwerty',
+
 
 
     }
