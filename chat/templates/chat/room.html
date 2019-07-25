@@ -1,33 +1,153 @@
-<!-- chat/templates/chat/room.html -->
+
+
+{% load bootstrap4 %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <title>Chat Room</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
-    <input id="chat-message-input" type="text" size="100"/><br/>
-    <input id="chat-message-submit" type="button" value="Send"/>
-</body>
+    <style>
+        .sent{
+            float:right;
+            width: 350px;
+            border-radius: 10%;
+            background-color: grey;
+            
+
+
+        }
+        .receive{
+            float:left;
+            width: 350px;
+            border-radius: 5%;
+            background-color: grey;
+
+
+        }
+        img{
+           
+        border-radius: 50%;
+        width: 50px;
+
+
+        }
+        #chat-log{
+            list-style-type: none;
+
+
+        }
+        .container-fluid{
+            background-color: black;
+            color: white;
+        }
+        .input{
+            padding-top: 540px;
+        }
+        .s{
+            padding-top: 100px;
+        }
+    
+    </style>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+                <h3 class=" text-center">IcedKonnect</h3>
+                <div class="messaging">
+                      
+                        <div class="mesgs">
+                          <div class="msg_history">
+                            <ul id="chat-log" >
+                              <li class="receive">
+                                  <div class="incoming_msg">
+                                      <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                                      <div class="received_msg">
+                                        <div class="received_withd_msg">
+                                          <p>Test, which is a new approach to have</p>
+                                          <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                                      </div>
+                                    </div>
+                
+                              </li>
+                              <div class="s">
+                                    <li class="sent">
+                                            <div class="outgoing_msg">
+                                                <div class="sent_msg">
+                                                  <p>Apollo University, Delhi, India Test</p>
+                                                  <span class="time_date"> 11:01 AM    |    Today</span> </div>
+                                              </div>
+                          
+                                        </li>
+                                       
+
+                              </div>
+                             
+                            </ul>
+                
+                        
+                           
+                          
+                           
+                          </div>
+                          
+                          <div class="input">
+                                <input id="chat-message-input" type="text" size="100"/><input id="chat-message-submit" class="btn btn-info" type="button" value="Send"/>
+
+                          </div>
+                          
+                        </div>
+                      </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+      
+      
+     
+      
+    </div></div>
+   
+    
+<script src="{% static 'reconnecting-websocket.js'  %}"></script>
+
 <script>
     var roomName = {{ room_name_json }};
-
-    var chatSocket = new WebSocket(
+    var username = {{ username }};
+  
+  
+    var chatSocket = new ReconnectingWebSocket(
         'ws://' + window.location.host +
         '/ws/chat/' + roomName + '/');
 
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
         var message = data['message'];
-        document.querySelector('#chat-log').value += (message + '\n');
-    };
+        var author =message['author'];
+        var msgs =document.createElement('li');
+        var pTag =document.createElement('p');
+        var imgTag =document.createElement('img');
+        msgs.textContent = message.content;
+        imgTag.src = 'https://cdn1.iconfinder.com/data/icons/messenger-and-society/16/user_person_avatar_unisex-512.png'
+        if (author=== username)  {
+            msgs.className= 'sent'
+        } else {
+            msgs.className= 'receive'
 
+        }
+        msgs.appendChild(imgTag);
+        msgs.appendChild(pTag);
+        document.querySelector('#chat-log').appendChild(msgs);
+    }
     chatSocket.onclose = function(e) {
         console.error('Chat socket closed unexpectedly');
     };
 
-    document.querySelector('#chat-message-input').focus();
     document.querySelector('#chat-message-input').onkeyup = function(e) {
         if (e.keyCode === 13) {  // enter, return
             document.querySelector('#chat-message-submit').click();
@@ -35,13 +155,17 @@
     };
 
     document.querySelector('#chat-message-submit').onclick = function(e) {
-        var messageInputDom = document.querySelector('#chat-message-input');
+        var messageInputDom = document.getElementById('chat-message-input');
         var message = messageInputDom.value;
         chatSocket.send(JSON.stringify({
-            'message': message
+            'command': 'new_message',
+            'message': message,
+            'from': username
         }));
 
-        messageInputDom.value = '';
+        messageInputDom.value = message;
     };
-</script>
+    </script>
+</body>
 </html>
+
