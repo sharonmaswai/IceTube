@@ -7,11 +7,11 @@ from django.conf.urls.static import static
 
 urlpatterns=[
 
-    url(r'^', views.home,name='home'),
+    url(r'^$', views.welcome,name='welcome'),
+    url(r'^home/', views.home,name='home'),
     url(r'^newprofile/', views.create_profile, name='profile-form'),
     url(r'^profile/(\d+)/', views.profile, name='profile'),
     url(r'^rate_form/(\d+)/',views.rate, name='rateform'),
-
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

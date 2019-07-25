@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    #logo {
+
+      margin-left: 300px;
+      margin-top: 150px;
+
+    }
+
+    nav {
+      background-color: white;
+    }
+
+    #log {
+      margin-right: 50px;
+
+    }
+
+    #reg {
+      margin-left: 900px;
+    }
+
+    footer {}
+  </style>
+</head>
+
+<!--  <nav class="navbar navbar-expand navbar-light fixed-top">-->
+<!--    <div class="container">-->
+<!--      <a class="navbar-brand" href="#home" style="color: #fff;">ICED TUBE</a>-->
+<!--      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"-->
+<!--        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
+<!--      <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--        <ul class="navbar-nav ml-auto">-->
+<!--          <li class="nav-item active">-->
+<!--            <a class="nav-link" href="" style="color: #fff;">Home</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="" style="color: #fff;">Profile</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="" style="color: #fff;">Sign up</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" href="" style="color: #fff">Login</a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </nav>-->
+<style>
+  body {
+    font-family: "Lato", sans-serif;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #818181;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+
+  #text1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 1.5s 1;
+  }
+
+  @keyframes text {
+    0% {
+      color: black;
+      margin-bottom: -45px;
+    }
+
+    50% {
+      letter-spacing: 70px;
+      margin-bottom: -40px;
+    }
+  }
+
+  .white-green {
+    font-weight: 700;
+    color: #4fa455;
+    border-color: white;
+    background: white;
+  }
+
+  .white-green:hover {
+    color: white;
+    background: #4fa455;
+    border-color: white;
+  }
+
+  .outline {
+    position: relative;
+    z-index: 3;
+    background: transparent;
+    color: #4fa455;
+    font-size: 14px;
+    border-color: #4fa455;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 22px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: #000;">&times;</a>
+    <a href="#" style="color: #000;">Home</a>
+    <a href="#" style="color: #000;">About</a>
+    <a href="#" style="color: #000;">Payments</a>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <div style="
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bold;
+width: 100%;
+height: 100vh; background: #000" id="home" class="wave">
+    <div class="container">
+      <span style="font-size:30px;cursor:pointer;color:#4fa455;padding-top:30%;" onclick="openNav()">&#9776;</span>
+    </div>
+    <h1 id="text1" style="display: flex; align-items: center;
+    justify-content: center; color: #4fa455; padding-top: 15%; font-size: 400%;">IcedKonnect</h1>
+    <br><br>
+  </div>
+  <footer>
+    <div class="footer">
+      <div class="container text-center">
+        <small>Copyright &copy;</small>
+      </div>
+    </div>
+    <!-- </footer>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Your Website</small>
+    </div>
+
+    </div>
+
+  </footer> -->
+</body>
+
+</html>
