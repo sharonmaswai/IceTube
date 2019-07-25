@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'iced',
     'chat',
     'channels',
-   
-    
 ]
 
 MIDDLEWARE = [
@@ -94,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ice',
         'USER': 'sharon-maswai',
-    'PASSWORD':'qwert',
+    'PASSWORD':'qwerty',
 
     }
 }

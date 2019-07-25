@@ -19,6 +19,8 @@ from .forms import ProfileForm, RateForm,UserSignUpForm
 
 
 # Create your views here.
+def home(request):
+    return render(request, 'home/index.html')
 
 @login_required(login_url='/accounts/login/')
 def dummy(request):
@@ -65,8 +67,7 @@ def activate_account(request, uidb64, token):
 
 # Create your views here.
 
-def home(request):
-    return render(request, 'home/index.html')
+
 
 def create_profile(request):
     current_user = request.user
