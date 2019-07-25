@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^accounts/', include('registration.backends.simple.urls')),
     url(r'^logout/$', views.logout, {"next_page": '/'}), 
     url(r'^', include ('iced.urls')),
+    url(r'^daraja/', include('payments.urls')),
     url(r'^chat/', include('chat.urls')),
 ]
