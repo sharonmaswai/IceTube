@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import KonnectDetails
+from .models import KonnectProfile
 
 class KonnectSerializer(serializers.ModelSerializer):
 	class Meta:
-		model=KonnectDetails
+		model=KonnectProfile
 		fields=('name','county','specialisation')

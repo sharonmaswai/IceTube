@@ -47,7 +47,7 @@ class Rating(models.Model):
     def __str__(self):
         return self.name        
 
-class  KonnectDetails(models.Model):
-    name=models.CharField(max_length=30)
+class  KonnectProfile(models.Model):
+    name=models.CharField(max_length=100)
     county=models.CharField(max_length=50,default='Kajiado')
     specialisation=models.CharField(max_length=50,default='Livestock')

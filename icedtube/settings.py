@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'chat',
     'channels',
     'rest_framework',
-    'django_daraja'
+    'django_daraja',
 
 ]
 SITE_ID=1
