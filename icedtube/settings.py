@@ -152,7 +152,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-<<<<<<< HEAD
+
 # The Mpesa environment to use
 # Possible values: sandbox, production
 
@@ -189,9 +189,5 @@ MPESA_PASSKEY = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c91
 
 
 LOGIN_REDIRECT_URL = '/home/'
-=======
 
 
-LOGIN_REDIRECT_URL = '/home/'
-
->>>>>>> 186d441d26bd27e3bdc8fc98954484dd7fe0f652
