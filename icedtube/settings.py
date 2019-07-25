@@ -28,6 +28,7 @@ SECRET_KEY = ')&m#lv5hpj+nijt0a*@0h+qu9jg_x0!f6n@$u)jvtqkntsij9p'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+SITE_ID=1
 
 
 # Application definition
@@ -40,12 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
-    'django.contrib.sites',
     'iced',
-    'pympesa',
     'django_daraja',
     'chat',
     'channels',
+   
 
 ]
 

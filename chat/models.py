@@ -18,7 +18,7 @@ class Message(models.Model):
 
     def __str__(self):
         return self.author.username 
-    def last_12_messages(self):
+    def last_12_messages():
         return Message.objects.order_by('-timesent').all()[: 12 ]  
 # class Chat(models.Model):
 #     members = models.ManyToManyField(
