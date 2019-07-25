@@ -42,9 +42,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'django.contrib.sites',
     'iced',
-
     'pympesa',
-
+    'django_daraja',
     'chat',
     'channels',
 
@@ -98,9 +97,8 @@ DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ice',
-
-        'USER': 'sharon-maswai',
-    'PASSWORD':'qwerty',
+        'USER': 'mitch',
+    'PASSWORD':'qwertyuiop',
 
 
     }

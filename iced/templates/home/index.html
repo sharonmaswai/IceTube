@@ -9,26 +9,27 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Document</title>
   <style>
- 
-    #logo{
+    #logo {
 
       margin-left: 300px;
       margin-top: 150px;
 
     }
-    nav{
+
+    nav {
       background-color: white;
     }
-    #log{
+
+    #log {
       margin-right: 50px;
 
     }
-    #reg{
+
+    #reg {
       margin-left: 900px;
     }
-    footer{
-      
-    }
+
+    footer {}
   </style>
 </head>
 
@@ -105,13 +106,68 @@
       font-size: 18px;
     }
   }
+
+  #text1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 1.5s 1;
+  }
+
+  @keyframes text {
+    0% {
+      color: black;
+      margin-bottom: -45px;
+    }
+
+    50% {
+      letter-spacing: 70px;
+      margin-bottom: -40px;
+    }
+  }
+
+  .white-green {
+    font-weight: 700;
+    color: #4fa455;
+    border-color: white;
+    background: white;
+  }
+
+  .white-green:hover {
+    color: white;
+    background: #4fa455;
+    border-color: white;
+  }
+
+  .outline {
+    position: relative;
+    z-index: 3;
+    background: transparent;
+    color: #4fa455;
+    font-size: 14px;
+    border-color: #4fa455;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 22px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+  }
+
+  a {
+    text-decoration: none;
+  }
 </style>
 </head>
 
 <body>
 
 
-  <div id="mySidenav" class="sidenav" >
+  <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: #000;">&times;</a>
     <a href="#" style="color: #000;">Home</a>
     <a href="#" style="color: #000;">About</a>
@@ -128,16 +184,21 @@
       document.getElementById("mySidenav").style.width = "0";
     }
   </script>
-
   <div style="
-
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-weight: bold;
 width: 100%;
 height: 100vh; background: #000" id="home" class="wave">
-    <span style="font-size:30px;cursor:pointer;color:#4fa455;padding-left:-100%;" onclick="openNav()">&#9776; MENU</span>
-    <h1 style="display: flex; align-items: center;
-    justify-content: center; color: #4fa455; padding-top: 18%; font-size: 400%;">IcedKonnect</h1>
+    <div class="container">
+      <span style="font-size:30px;cursor:pointer;color:#4fa455;padding-top:30%;" onclick="openNav()">&#9776;</span>
+    </div>
+    <h1 id="text1" style="display: flex; align-items: center;
+    justify-content: center; color: #4fa455; padding-top: 15%; font-size: 400%;">IcedKonnect</h1>
+    <br><br><br>
+    <div style="text-align:center;">
+      <a href="#" class="outline white-green" style="color: #fff;text-align: center;text-decoration: none;">Login</a>
+      <a href="" class="outline white-green" style="color: #fff;text-decoration: none;">Sign up</a>
+    </div>
   </div>
   <footer>
     <div class="footer">
@@ -145,21 +206,15 @@ height: 100vh; background: #000" id="home" class="wave">
         <small>Copyright &copy;</small>
       </div>
     </div>
-  </footer>
-  <!-- <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <!-- </footer>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
       <small>Copyright &copy; Your Website</small>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3a782e044a1b745256f5221b066543a44000a39f
     </div>
 
-  </div>
+    </div>
 
- <footer>
-
- </footer>
+  </footer> -->
 </body>
 
 </html>
