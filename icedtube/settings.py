@@ -41,13 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
-    
     'iced',
     'django_daraja',
-
-
     'chat',
     'channels',
+   
 
 ]
 
@@ -99,9 +97,8 @@ DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ice',
-
-        'USER': 'sharon-maswai',
-    'PASSWORD':'qwerty',
+        'USER': 'mitch',
+    'PASSWORD':'qwertyuiop',
 
 
     }
