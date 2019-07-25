@@ -13,8 +13,11 @@ from .token_generator import account_activation_token
 from django.contrib.auth.models import User
 from django.core.mail import EmailMessage
 from django.shortcuts import render, redirect
-from .models import Profile, Rating
+from .models import Profile, Rating, KonnectDetails
 from .forms import ProfileForm, RateForm,UserSignUpForm
+from rest_framework.response import Response 
+from rest_framework.views import APIView
+from .serializer import KonnectSerializer
 
 
 
@@ -146,3 +149,9 @@ def rate_officer(request,profile_id):
     return render(request, 'profile.html',{'profiles':profiles,'mean_rate':mean_rate})
 
 
+class KonnectList(APIView):
+    def get(self, request, format=None):
+        all_details=KonnectDetails.objects.all()
+        serializer=KonnectSerializer(all_details, many=True)
+
+        return Response(serializers.data)

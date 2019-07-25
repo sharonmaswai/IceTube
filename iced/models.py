@@ -14,6 +14,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE,null=True,blank=True)
     bio = HTMLField(max_length=500,default='About me')
     task= models.IntegerField()
+    county=models.CharField(max_length=50,default='Kajiado')
+    specialisation=models.CharField(max_length=50,default='Livestock')
 
     def save_profile(self):
         self.save()
@@ -44,3 +46,8 @@ class Rating(models.Model):
    
     def __str__(self):
         return self.name        
+
+class  KonnectDetails(models.Model):
+    name=models.CharField(max_length=30)
+    county=models.CharField(max_length=50,default='Kajiado')
+    specialisation=models.CharField(max_length=50,default='Livestock')

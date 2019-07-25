@@ -11,6 +11,7 @@ urlpatterns=[
     url(r'^newprofile/', views.create_profile, name='profile-form'),
     url(r'^profile/(\d+)/', views.profile, name='profile'),
     url(r'^rate_form/(\d+)/',views.rate, name='rateform'),
+    url(r'^api/details/$',views.KonnectList.as_view())
 
 ]
 if settings.DEBUG:
