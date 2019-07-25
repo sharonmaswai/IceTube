@@ -22,6 +22,8 @@ from .forms import ProfileForm, RateForm,UserSignUpForm
 def welcome(request):
     return render(request, 'home/index.html')
 
+    
+@login_required(login_url='/accounts/login/')
 def home(request):
 	return render(request, 'home/home.html')
 
