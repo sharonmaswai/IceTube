@@ -11,7 +11,7 @@
 
 ### Setup Requirements
 
-* 
+* Clone this repository: ""
 
 ### Known Bugs
 
