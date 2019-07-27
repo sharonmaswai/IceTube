@@ -42,7 +42,7 @@ You need the following to work on the project:
 
 * reddis
 
-* RASA
+* Dialogflow
 
 * daraja api
 
