@@ -27,8 +27,12 @@ SECRET_KEY = ')&m#lv5hpj+nijt0a*@0h+qu9jg_x0!f6n@$u)jvtqkntsij9p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']
+
+
 SITE_ID=1
+
 
 
 # Application definition
@@ -46,6 +50,7 @@ INSTALLED_APPS = [
     'channels',
     'rest_framework',
     'django_daraja',
+    'bot',
 
 
 ]
@@ -108,9 +113,9 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -126,6 +131,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
 
 
 # Internationalization
@@ -191,5 +197,14 @@ MPESA_PASSKEY = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c91
 
 
 LOGIN_REDIRECT_URL = '/home/'
+
+#Rest Framework
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 
