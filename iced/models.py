@@ -12,8 +12,8 @@ class Profile(models.Model):
     profile_pic=models.ImageField(default='image.png',upload_to='profiles/')
     name=models.CharField(max_length=30)
     user = models.OneToOneField(User,on_delete=models.CASCADE,null=True,blank=True)
-    bio = HTMLField(max_length=500,default='About me')
-    task= models.IntegerField()
+    bio = HTMLField(max_length=500,default='About me', null=True)
+    task= models.IntegerField(null=True)
     county=models.CharField(max_length=50,default='Kajiado')
     specialisation=models.CharField(max_length=50,default='Livestock')
 

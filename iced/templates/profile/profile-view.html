@@ -1,8 +1,8 @@
-{%extends 'profile/base.html'%}
+{%extends 'profile/base.html' %}
 
 {% block content %}
 
-{{block.super}}
+
 <style>
 
 
@@ -252,8 +252,9 @@
 </style>
 <br><br><br>
   <div class="container">
+    
     <div class="row">
-    {%for profile in profile%}
+    {% for profile in profiles %}
     <div class="card hovercard">
         <div class="cardheader">
 
@@ -272,30 +273,24 @@
             <div class="desc">Curious developer</div>
             <div class="desc">Tech geek</div>
         </div>
-        {%endfor%}
-        {%for r in ratings%}
-        <div class="rating">
-            <p>Rating: <strong>{{r.rating}}</strong></p>
-        
-        </div>
         <div class="bottom">
-                <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
-                    <i class="fa fa-twitter"></i>
-                </a>
-                <a class="btn btn-danger btn-sm" rel="publisher"
-                   href="https://plus.google.com/+ahmshahnuralam">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-                <a class="btn btn-primary btn-sm" rel="publisher"
-                   href="https://plus.google.com/shahnuralam">
-                    <i class="fa fa-facebook"></i>
-                </a>
-                <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                    <i class="fa fa-behance"></i>
-                </a>
-            </div>
+            <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a class="btn btn-danger btn-sm" rel="publisher"
+               href="https://plus.google.com/+ahmshahnuralam">
+                <i class="fa fa-google-plus"></i>
+            </a>
+            <a class="btn btn-primary btn-sm" rel="publisher"
+               href="https://plus.google.com/shahnuralam">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                <i class="fa fa-behance"></i>
+            </a>
+        </div>
         {%endfor%}
-        
+       
     </div>
     
     
