@@ -29,6 +29,9 @@ def welcome(request):
 @login_required(login_url='/accounts/login/')
 def home(request):
 	return render(request, 'home/home.html')
+@login_required(login_url='/accounts/login/')
+def bot(request):
+	return render(request, 'bot.html')    
 
 
 def usersignup(request):
@@ -91,23 +94,23 @@ def profile(request, officer_id):
     current_user = request.user
    
     profiles=Profile.objects.filter(id=officer_id)
-    ratings=Rating.objects.filter(officer_id=profiles)
-    average_rating=[]
-    mean_rate=0 
+    # ratings=Rating.objects.filter(officer_id=profiles)
+    # average_rating=[]
+    # mean_rate=0 
         
-    for rate in ratings:
-        average_rating.append(rate.rating)
+    # for rate in ratings:
+    #     average_rating.append(rate.rating)
             
-    total_rates=sum(average_rating)
-    if len(ratings)>0:
-        total_rating=total_rates/len(ratings)
-        mean_rate=total_rating
-    else:
-        total_rating=0
-        mean_rate=total_rating  
+    # total_rates=sum(average_rating)
+    # if len(ratings)>0:
+    #     total_rating=total_rates/len(ratings)
+    #     mean_rate=total_rating
+    # else:
+    #     total_rating=0
+    #     mean_rate=total_rating  
     
     
-    return render(request,'profile/profile-view.html',{'profile':profile, 'ratings':ratings})
+    return render(request,'profile/profile-view.html',{'profiles': profiles })
 def rate(request,id):
     
     profile=Profile.objects.get(id=id)
