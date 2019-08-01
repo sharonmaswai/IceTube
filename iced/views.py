@@ -22,12 +22,13 @@ from .serializer import KonnectSerializer
 
 
 # Create your views here.
-def home(request):
+def welcome(request):
     return render(request, 'home/index.html')
 
+    
 @login_required(login_url='/accounts/login/')
-def dummy(request):
-	return render(request, 'dummy.html')
+def home(request):
+	return render(request, 'home/home.html')
 
 
 def usersignup(request):

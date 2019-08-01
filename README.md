@@ -11,13 +11,18 @@
 
 ### Setup Requirements
 
-* 
+* Clone this repository: ""
 
 ### Known Bugs
 
 * There are no known bugs bug if there are, feel free to contact any of us.
 
 ### BDD
+
+| Behavior                           | Input                                                            |  Output                                |
+| ---------------------------------- | ---------------------------------------------------------------- | ---------------------------------------|
+|                                    |                                                                  |                                        |
+
 
 
 ### Technologies Used

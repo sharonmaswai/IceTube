@@ -6,10 +6,10 @@ from django.views.decorators.csrf import csrf_exempt
 from chatterbot import ChatBot
 
 chatbot = ChatBot(
-    'Ron Obvious',
+    'IcedKonnect',
     trainer='chatterbot.trainers.ChatterBotCorpusTrainer',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    database_uri='sqlite:///database.sqlite3'
+    database_uri='sqlite:///database.sqlite3',
 )
 
 # Train based on the english corpus

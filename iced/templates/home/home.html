@@ -28,8 +28,6 @@
     #reg {
       margin-left: 900px;
     }
-
-    footer {}
   </style>
 </head>
 
@@ -153,9 +151,16 @@
     border-style: solid;
     border-width: 2px;
     border-radius: 22px;
-    padding: 10px 40px;
+    padding: 10px 25px;
     text-transform: uppercase;
     transition: all 0.2s linear;
+  }
+
+  .green-white {
+    font-weight: 700;
+    color: #4fa455;
+    border-color: transparent;
+    background: transparent;
   }
 
   a {
@@ -166,9 +171,11 @@
 
 <body>
   <div id="mySidenav" class="sidenav">
+
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: #000;">&times;</a>
     <a href="#" style="color: #000;">Home</a>
-    <a href="#" style="color: #000;">About</a>
+    <a href="{% url 'room' 'lobby' %}" style="color: #000;">Chat</a>
+
     <a href="#" style="color: #000;">Payments</a>
   </div>
 
@@ -185,18 +192,39 @@
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-weight: bold;
 width: 100%;
-height: 100vh; background: #000" id="home" class="wave">
-
-    <h1 id="text1" style="display: flex; align-items: center;
-    justify-content: center; color: #4fa455; padding-top: 17%; font-size: 400%;">IcedKonnect</h1>
+height: 100vh; background: #000" id="home">
+    <!-- <div class="container" style="padding-top: 25px;">
+      <div style="text-align:left;">
+        <span style="cursor:pointer;color:#4fa455;" class="outline white-green" onclick="openNav()">MENU</span>
+      </div>
+      <div style="text-align:right;">
+        <a href="/logout" class="outline white-green text-center" style="color: #fff;">Logout</a>
+      </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #000;">
+      <a class="nav-item outline green-white " href="#home" style="color: #fff; text-decoration: none;"
+        onclick="openNav()">MENU</a>
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/logout" class="outline white-green text-center"
+                style="color: #fff; text-decoration: none;">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 id="text1"
+      style="display: flex; align-items: center; justify-content: center; color: #4fa455; padding-top: 12%; font-size: 550%;">
+      IcedKonnect</h1>
     <br><br>
-    <div style="text-align:center;">
-      <a href="/accounts/login" class="outline white-green" style="color: #fff;text-align: center;text-decoration: none;">Login</a>
-      <a href="/accounts/register" class="outline white-green" style="color: #fff;text-decoration: none;">Sign up</a>
-    </div>
-
+    <h3 style="align-items: center; text-align:center; position: relative;color: #fff">Democratize Agribusiness.</h3>
   </div>
-
   <footer>
     <!-- <div class="footer">
       <div class="container text-center">
@@ -210,7 +238,7 @@ height: 100vh; background: #000" id="home" class="wave">
     </div>
 
     </div>
-
+&#9776;
   </footer> -->
 </body>
 

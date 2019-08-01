@@ -27,7 +27,12 @@ SECRET_KEY = ')&m#lv5hpj+nijt0a*@0h+qu9jg_x0!f6n@$u)jvtqkntsij9p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['*']
+
+
+SITE_ID=1
+
 
 
 # Application definition
@@ -40,13 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap4',
-    'django.contrib.sites',
     'iced',
     'chat',
     'channels',
     'rest_framework',
     'django_daraja',
     'bot',
+
 
 ]
 SITE_ID=1
@@ -102,6 +107,7 @@ DATABASES = {
 
         'USER': 'michael',
     'PASSWORD':'mikemike22',
+
 
 
     }
