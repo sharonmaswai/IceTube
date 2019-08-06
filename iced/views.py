@@ -74,43 +74,30 @@ def activate_account(request, uidb64, token):
 
 # Create your views here.
 
-
-
 def create_profile(request):
-    current_user = request.user
-    if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES)
+    """
+    """
+    current_user = request.user 
+    if request.method =='POST':
+        form=ProfileForm(request.POST, request.FILES)
         if form.is_valid():
-            profile = form.save(commit=False)
-            #profile.user=current_user.id
-            profile.save()
-
-        return redirect('profile')
+            created_profile = form.save(commit=False)
+            created_profile.user = current_user
+            created_profile.save()
+        return redirect(view_profile)
     else:
-        form = ProfileForm()
-    return render(request, 'profile/profile-form.html', {"form":form})
-    
-def profile(request, officer_id):
-    current_user = request.user
-   
-    profiles=Profile.objects.filter(id=officer_id)
-    # ratings=Rating.objects.filter(officer_id=profiles)
-    # average_rating=[]
-    # mean_rate=0 
-        
-    # for rate in ratings:
-    #     average_rating.append(rate.rating)
-            
-    # total_rates=sum(average_rating)
-    # if len(ratings)>0:
-    #     total_rating=total_rates/len(ratings)
-    #     mean_rate=total_rating
-    # else:
-    #     total_rating=0
-    #     mean_rate=total_rating  
-    
-    
-    return render(request,'profile/profile-view.html',{'profiles': profiles })
+        form=ProfileForm()
+    return render(request, 'profile/profile-form.html',{'form':form})
+
+def view_profile(request):
+    """
+    """
+    current_user=request.user
+   # profiles=Profile.objects.filter(user_id=current_user.id)
+    profiles=Profile.objects.all()
+    return render(request, 'profile/profile-view.html',{'profiles':profiles})
+
+
 def rate(request,id):
     
     profile=Profile.objects.get(id=id)

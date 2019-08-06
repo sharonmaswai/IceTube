@@ -1,5 +1,3 @@
-
-
 {% load bootstrap4 %}
 {% load static %}
 
@@ -16,18 +14,19 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    
   </head>
 
-  <style class="cp-pen-styles">
-  body {
+
+ <style>
+   body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: white;
+  background: #27ae60;
   font-family: "proxima-nova", "Source Sans Pro", sans-serif;
-  font-size: 20px;
+  font-size: 7px;
   letter-spacing: 0.1px;
   color: #32465a;
   text-rendering: optimizeLegibility;
@@ -38,10 +37,8 @@
 #frame {
   width: 100%;
   min-width: 360px;
-  max-width: 1260px;
-  height: 92vh;
+  height: 100vh;
   min-height: 300px;
-  max-height: 720px;
   background: #E6EAEA;
 }
 @media screen and (max-width: 360px) {
@@ -56,15 +53,15 @@
   max-width: 340px;
   width: 40%;
   height: 100%;
-  background: rgb(79, 161, 79);
+  background: black;
   color: #f5f5f5;
   overflow: hidden;
   position: relative;
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel {
-    width: 58px;
-    min-width: 58px;
+    width: 100px;
+    min-width: 100px;
   }
 }
 #frame #sidepanel #profile {
@@ -76,7 +73,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 5px 0 0 0;
-    background: rgb(79, 161, 79);
+    background: #32465a;
   }
 }
 #frame #sidepanel #profile.expanded .wrap {
@@ -95,8 +92,8 @@
   -ms-filter: "FlipH";
 }
 #frame #sidepanel #profile .wrap {
-  height: 60px;
-  line-height: 60px;
+  height: 65px;
+  line-height: 65px;
   overflow: hidden;
   -moz-transition: 0.3s height ease;
   -o-transition: 0.3s height ease;
@@ -105,11 +102,11 @@
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel #profile .wrap {
-    height: 55px;
+    height: 65px;
   }
 }
 #frame #sidepanel #profile .wrap img {
-  width: 50px;
+  width: 60px;
   border-radius: 50%;
   padding: 3px;
   border: 2px solid #e74c3c;
@@ -123,7 +120,7 @@
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel #profile .wrap img {
-    width: 40px;
+    width: 60px;
     margin-left: 4px;
   }
 }
@@ -153,7 +150,7 @@
   margin-top: 23px;
   font-size: 0.8em;
   cursor: pointer;
-  color: rgb(79, 161, 79);
+  color: #435f7a;
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel #profile .wrap i.expand-button {
@@ -169,7 +166,7 @@
   border-radius: 6px;
   z-index: 99;
   line-height: initial;
-  background:  rgb(79, 161, 79);
+ background: black;
   -moz-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   -webkit-transition: 0.3s all ease;
@@ -221,7 +218,7 @@
   }
 }
 #frame #sidepanel #profile .wrap #status-options ul li:hover {
-  background: #496886;
+  background: black;
 }
 #frame #sidepanel #profile .wrap #status-options ul li span.status-circle {
   position: absolute;
@@ -332,7 +329,7 @@
 }
 #frame #sidepanel #search input:focus {
   outline: none;
-  background: #435f7a;
+  background: black;
 }
 #frame #sidepanel #search input::-webkit-input-placeholder {
   color: #f5f5f5;
@@ -379,15 +376,15 @@
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel #contacts ul li.contact {
-    padding: 6px 0 46px 8px;
+    padding: 6px 0 66px 8px;
   }
 }
 #frame #sidepanel #contacts ul li.contact:hover {
   background: #32465a;
 }
 #frame #sidepanel #contacts ul li.contact.active {
-  background: #32465a;
-  border-right: 5px solid #435f7a;
+  background: black;
+  border-right: 5px solid black;
 }
 #frame #sidepanel #contacts ul li.contact.active span.contact-status {
   border: 2px solid #32465a !important;
@@ -409,7 +406,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 2px solid #2c3e50;
+  border: 2px solid black;
   background: #95a5a6;
 }
 #frame #sidepanel #contacts ul li.contact .wrap span.online {
@@ -422,7 +419,7 @@
   background: #e74c3c;
 }
 #frame #sidepanel #contacts ul li.contact .wrap img {
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
   float: left;
   margin-right: 10px;
@@ -474,7 +471,7 @@
   border: none;
   width: 50%;
   padding: 10px 0;
-  background: rgb(79, 161, 79);
+  background: black;
   color: #f5f5f5;
   cursor: pointer;
   font-size: 0.85em;
@@ -491,7 +488,7 @@
   outline: none;
 }
 #frame #sidepanel #bottom-bar button:nth-child(1) {
-  border-right: 1px solid #2c3e50;
+  border-right: 1px solid black;
 }
 @media screen and (max-width: 735px) {
   #frame #sidepanel #bottom-bar button:nth-child(1) {
@@ -500,7 +497,7 @@
   }
 }
 #frame #sidepanel #bottom-bar button:hover {
-  background: #435f7a;
+  background: black;
 }
 #frame #sidepanel #bottom-bar button i {
   margin-right: 3px;
@@ -525,7 +522,7 @@
 }
 @media screen and (max-width: 735px) {
   #frame .content {
-    width: calc(100% - 58px);
+    width: calc(100% - 100px);
     min-width: 300px !important;
   }
 }
@@ -536,18 +533,19 @@
 }
 #frame .content .contact-profile {
   width: 100%;
-  height: 60px;
-  line-height: 60px;
+  height: 80px;
+  line-height: 80px;
   background: #f5f5f5;
 }
 #frame .content .contact-profile img {
-  width: 40px;
+  width: 60px;
   border-radius: 50%;
   float: left;
   margin: 9px 12px 0 9px;
 }
 #frame .content .contact-profile p {
   float: left;
+  font-size: 18px;
 }
 #frame .content .contact-profile .social-media {
   float: right;
@@ -568,6 +566,7 @@
   max-height: calc(100% - 93px);
   overflow-y: scroll;
   overflow-x: hidden;
+  width: 100%;
 }
 @media screen and (max-width: 735px) {
   #frame .content .messages {
@@ -596,7 +595,7 @@
   margin: 6px 8px 0 0;
 }
 #frame .content .messages ul li.sent p {
-  background: #435f7a;
+  background: black;
   color: #f5f5f5;
 }
 #frame .content .messages ul li.replies img {
@@ -608,7 +607,7 @@
   float: right;
 }
 #frame .content .messages ul li img {
-  width: 22px;
+  width: 42px;
   border-radius: 50%;
   float: left;
 }
@@ -616,8 +615,9 @@
   display: inline-block;
   padding: 10px 15px;
   border-radius: 20px;
-  max-width: 205px;
+  max-width: 300px;
   line-height: 130%;
+  font-size: 18px;
 }
 @media screen and (min-width: 735px) {
   #frame .content .messages ul li p {
@@ -639,7 +639,7 @@
   border: none;
   width: calc(100% - 90px);
   padding: 11px 32px 10px 8px;
-  font-size: 0.8em;
+  font-size: 1.8em;
   color: #32465a;
 }
 @media screen and (max-width: 735px) {
@@ -655,14 +655,14 @@
   right: 60px;
   z-index: 4;
   margin-top: 10px;
-  font-size: 1.1em;
+  font-size: 1.8em;
   color: #435f7a;
   opacity: .5;
   cursor: pointer;
 }
 @media screen and (max-width: 735px) {
   #frame .content .message-input .wrap .attachment {
-    margin-top: 17px;
+    margin-top: 19px;
     right: 65px;
   }
 }
@@ -675,182 +675,179 @@
   width: 50px;
   padding: 12px 0;
   cursor: pointer;
-  background: #32465a;
+  background: black;
   color: #f5f5f5;
 }
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 735px) {
   #frame .content .message-input .wrap button {
-    padding: 16px 0;
+    padding: 21px 0;
   }
 }
 #frame .content .message-input .wrap button:hover {
-  background: #435f7a;
+  background: black;
 }
 #frame .content .message-input .wrap button:focus {
   outline: none;
 }
 
-</style> 
-<body class="container-fluid">
-    <div id="frame">
-        <div id="sidepanel">
-          <div id="profile">
-            <div class="wrap">
-              <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt="" />
-              <p>Mike Ross</p>
-              <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
-              <div id="status-options">
-                <ul>
-                  <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
-                  <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
-                  <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
-                  <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
-                </ul>
-              </div>
-              <div id="expanded">
-                <label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
-                <input name="twitter" type="text" value="mikeross" />
-                <label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
-                <input name="twitter" type="text" value="ross81" />
-                <label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
-                <input name="twitter" type="text" value="mike.ross" />
-              </div>
-            </div>
-          </div>
-          <div id="search">
-            <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
-            <input type="text" placeholder="Search contacts..." />
-          </div>
-          <div id="contacts">
-            <ul>
-              <li class="contact">
-                <div class="wrap">
-                  <span class="contact-status online"></span>
-                  <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
-                  <div class="meta">
-                    <p class="name">Louis Litt</p>
-                    <p class="preview">You just got LITT up, Mike.</p>
-                  </div>
-                </div>
-              </li>
-              <li class="contact active">
-                <div class="wrap">
-                  <span class="contact-status busy"></span>
-                  <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                  <div class="meta">
-                    <p class="name">Harvey Specter</p>
-                    <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div id="bottom-bar">
-            <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
-            <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
-          </div>
+.fa {
+  font-size: 1.5em !important;
+} 
+ </style>
+</body>
+<div id="frame">
+  <div id="sidepanel">
+    <div id="profile">
+      <div class="wrap">
+        <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt="" />
+        <p>Mike Ross</p>
+        <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+        <div id="status-options">
+          <ul>
+            <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+            <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+            <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+            <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+          </ul>
         </div>
-        <div class="content">
-          <div class="contact-profile">
-            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-            <p>{{ username }}</p>
-            <div class="social-media">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="messages">
-            <ul id="chat-log">
-              {% comment %} <li class="sent">
-                <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
-                <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
-              </li>
-              <li class="replies">
-                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
-                <p>When you're backed against the wall, break the god damn thing down.</p>
-              </li> {% endcomment %}
-            </ul>
-          </div>
-          <div class="message-input">
-            <div class="wrap">
-            <input id="chat-message-input" type="text" placeholder="Write your message..." />
-            <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
-            <button id="chat-message-submit" class="submit">
-              <i class="fa fa-paper-plane" aria-hidden="true"></i>
-            </button>
-            </div>
-          </div>
+        <div id="expanded">
+          <label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
+          <input name="twitter" type="text" value="mikeross" />
+          <label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
+          <input name="twitter" type="text" value="ross81" />
+          <label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
+          <input name="twitter" type="text" value="mike.ross" />
         </div>
       </div>
-
+    </div>
+    <div id="search">
+      <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+      <input type="text" placeholder="Search contacts..." />
+    </div>
+    <div id="contacts">
+      <ul>
+        <li class="contact">
+          <div class="wrap">
+            <span class="contact-status online"></span>
+            <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+            <div class="meta">
+              <p class="name">Louis Litt</p>
+              <p class="preview">You just got LITT up, Mike.</p>
+            </div>
+          </div>
+        </li>
+        <li class="contact active">
+          <div class="wrap">
+            <span class="contact-status busy"></span>
+            <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+            <div class="meta">
+              <p class="name">Harvey Specter</p>
+              <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="bottom-bar">
+      <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
+      <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="contact-profile">
+      <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+      <p>{{ username }}</p>
+      <div class="social-media">
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="messages">
+      <ul id="chat-log">
+        {% comment %} <li class="sent">
+          <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+          <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+        </li>
+        <li class="replies">
+          <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+          <p>When you're backed against the wall, break the god damn thing down.</p>
+        </li> {% endcomment %}
+      </ul>
+    </div>
+    <div class="message-input">
+      <div class="wrap">
+      <input id="chat-message-input" type="text" />
+      <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+      <button id="chat-message-submit" class="submit">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="{% static 'main.js' %}"></script>
 <script src="{% static 'reconnecting-websocket.js' %}"></script>
 <script>
+ var roomName = {{ room_name_json }};
+   var username = {{ username }};
+   var chatSocket = new ReconnectingWebSocket(
+       'ws://' + window.location.host +
+       '/ws/chat/' + roomName + '/');
+   chatSocket.onopen = function(e) {
+     fetchMessages();
+   }
+   chatSocket.onmessage = function(e) {
+       var data = JSON.parse(e.data);
+       if (data['command'] === 'messages') {
+         for (let i=0; i<data['messages'].length; i++) {
+           createMessage(data['messages'][i]);
+         }
+       } else if (data['command'] === 'new_message'){
+         createMessage(data['message']);
+       }
+   };
+   chatSocket.onclose = function(e) {
+       console.error('Chat socket closed unexpectedly');
+   };
+   document.querySelector('#chat-message-input').onkeyup = function(e) {
+       if (e.keyCode === 13) {  // enter, return
+           document.querySelector('#chat-message-submit').click();
+       }
+   };
+   document.querySelector('#chat-message-submit').onclick = function(e) {
+       var messageInputDom = document.getElementById('chat-message-input');
+       var message = messageInputDom.value;
+       chatSocket.send(JSON.stringify({
+           'command': 'new_message',
+           'message': message,
+           'from': username
+       }));
+       messageInputDom.value = '';
+   };
+   function fetchMessages() {
+     chatSocket.send(JSON.stringify({'command': 'fetch_messages' }));
+   }
+   function createMessage(data) {
+     var author = data['author'];
+     var msgListTag = document.createElement('li');
+     var imgTag = document.createElement('img');
+     var pTag = document.createElement('p');
+     pTag.textContent = data.content;
+     imgTag.src = 'https://instagram.fmba3-1.fna.fbcdn.net/vp/84956ea9ec056bba18c91072469121f7/5DDA93E9/t51.2885-19/s150x150/56653096_434762827343795_6071080308919238656_n.jpg?_nc_ht=instagram.fmba3-1.fna.fbcdn.net';
+     if (author === username) {
+       msgListTag.className = 'sent';
+     } else {
+       msgListTag.className = 'replies';
+     }
+     msgListTag.appendChild(imgTag);
+     msgListTag.appendChild(pTag);
+     document.querySelector('#chat-log').appendChild(msgListTag);
+   }
 
- 
-    var roomName = {{ room_name_json }};
-    var username = {{ username }};
-  
-  
-    var chatSocket = new WebSocket(
-        'ws://' + window.location.host +
-        '/ws/chat/' + roomName + '/');
-    chatSocket.onopen = function (e) {
-    fetchMessages(); 
-    }
 
-    chatSocket.onmessage = function(e) {
-        var data = JSON.parse(e.data);
-        if (data['command'] === 'messages') {
-          for (let i=0; i<data['messages'].length; i++) {
-            createMessage(data['messages'][i]);
-          }
-        } else if (data['command'] === 'new_message'){
-          createMessage(data['message']);
-        }
-       
-    };
-    chatSocket.onclose = function(e) {
-        console.error('Chat socket closed unexpectedly');
-    };
-    document.querySelector('#chat-message-input').onkeyup = function(e) {
-        if (e.keyCode === 13) {  // enter, return
-            document.querySelector('#chat-message-submit').click();
-        }
-    };
-    document.querySelector('#chat-message-submit').onclick = function(e) {
-      console.log("Clicked")
-      var messageInputDom = document.getElementById('chat-message-input');
-        var message = messageInputDom.value;
-        chatSocket.send(JSON.stringify({
-            'command': 'new_message',
-            'message': message,
-            'from': username
-        }));
-        messageInputDom.value = '';
-    };
-    function fetchMessages() {
-      chatSocket.send(JSON.stringify({'command': 'fetch_messages' }));
-    }
-    function createMessage(data) {
-      var author = data['author'];
-      var msgs = document.createElement('li');
-      var imgTag = document.createElement('img');
-      var pTag = document.createElement('p');
-      pTag.textContent = data.content;
-      imgTag.src = 'http://emilcarlsson.se/assets/mikeross.png';
-      
-      if (author === username) {
-        msgs.className = 'sent';
-      } else {
-        msgs.className = 'replies';
-      }
-      msgs.appendChild(imgTag);
-      msgs.appendChild(pTag);
-      document.querySelector('#chat-log').appendChild(msgs);
-    }
-   
-    </script>
-</body></html>
+</script>
+</body>
+
+</html> 
