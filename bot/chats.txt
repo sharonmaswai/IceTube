@@ -1,4 +1,4 @@
 hallo
 hi, how may i help you?
 my animal is sick.
-get information from here https://google.com
+get information from here http://127.0.0.1:8000/profile/

@@ -12,6 +12,12 @@ window.onload = function () {
 	  	
 	  },
 	  methods: {
+	  	formatText:(text)=>{
+			return {"message":"go to"
+				"link":text
+			};
+		},
+
 		add_message: function() {
 			if (this.input.length > 0) {
 				var message = {
@@ -40,7 +46,8 @@ window.onload = function () {
 			        referrer: 'no-referrer',
 			        })
 			        .then(response => response.json()).then((json) => {
-			          	this.messages.push(json['message'])
+
+			          	this.messages.push(json['message']['text'])
 			    	})
 			} else {
 				this.send_blank = true;
@@ -61,4 +68,4 @@ window.onload = function () {
 	});
 };
 
-	
+

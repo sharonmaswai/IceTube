@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'channels',
     'rest_framework',
     'django_daraja',
+    'chatterbot.ext.django_chatterbot',
     'bot',
 
 
@@ -103,10 +104,10 @@ CHANNEL_LAYERS = {
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'iced',
+        'NAME': 'ice',
 
-        'USER': 'sharon-maswai',
-    'PASSWORD':'qwerty',
+        'USER': 'michael',
+    'PASSWORD':'mikemike22',
 
 
 

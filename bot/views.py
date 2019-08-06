@@ -7,7 +7,7 @@ from chatterbot import ChatBot
 
 chatbot = ChatBot(
     'IcedKonnect',
-    trainer='chatterbot.trainers.ChatterBotCorpusTrainer',
+    trainer='chatterbot.trainers.ListTrainer',
     storage_adapter='chatterbot.storage.SQLStorageAdapter',
     database_uri='sqlite:///database.sqlite3',
 )
@@ -42,6 +42,6 @@ def get_response(request):
 # 	context = {'title': 'Chatbot Version 1.0'}
 # 	return HttpResponse('template_name', context)
 
-def home(request):
+def bot(request):
 	context = ({'title: Chatbot Version 1.0'})
-	return render(request,'home.html')
+	return render(request,'bot.html')

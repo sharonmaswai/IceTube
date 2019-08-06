@@ -90,10 +90,13 @@ def create_profile(request):
         form = ProfileForm()
     return render(request, 'profile/profile-form.html', {"form":form})
     
-def profile(request, officer_id):
-    current_user = request.user
-   
-    profiles=Profile.objects.filter(id=officer_id)
+def view_profile(request):
+   """
+   """
+   current_user=request.user
+  # profiles=Profile.objects.filter(user_id=current_user.id)
+   profiles=Profile.objects.all()
+   return render(request, 'profile/profile-view.html',{'profiles':profiles})
     # ratings=Rating.objects.filter(officer_id=profiles)
     # average_rating=[]
     # mean_rate=0 
@@ -110,7 +113,7 @@ def profile(request, officer_id):
     #     mean_rate=total_rating  
     
     
-    return render(request,'profile/profile-view.html',{'profiles': profiles })
+    
 def rate(request,id):
     
     profile=Profile.objects.get(id=id)
