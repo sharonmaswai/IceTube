@@ -16,7 +16,7 @@ class UserSignUpForm(UserCreationForm):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('name','task','bio','profile_pic') 
+        fields = ('name','profile_pic', 'specialisation','county') 
 class RateForm(forms.ModelForm):
     class Meta:
         model= Rating
