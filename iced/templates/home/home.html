@@ -1,3 +1,5 @@
+{% extends 'home/base.html' %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,7 +172,7 @@
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav" style="text-align: center;">
     <a href="#home" style="color: #000;">Home</a>
     <a href="#" style="color: #000;">Chat</a>
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color: #000;">&times;</a>
@@ -239,5 +241,5 @@ height: 100vh; background: #000" id="home">
 &#9776;
   </footer> -->
 </body>
-
+{% endblock %}
 </html>
