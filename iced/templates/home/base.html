@@ -1,0 +1,50 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% block styles %}
+  {% bootstrap_css %}
+
+  {% endblock %}
+  <title>IcedTube</title>
+</head>
+
+<body>
+
+
+  {% block content %}
+
+  {%endblock%}
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- JQuery -->
+
+  {% bootstrap_javascript %}
+  {% endblock %}
+</body>
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyByBLXnKhwUx3oSleh7yfC581WWvFWUcxQ",
+    authDomain: "icedkonnect-45b86.firebaseapp.com",
+    databaseURL: "https://icedkonnect-45b86.firebaseio.com",
+    projectId: "icedkonnect-45b86",
+    storageBucket: "",
+    messagingSenderId: "897899757299",
+    appId: "1:897899757299:web:e053af737a774cd2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+</html>
