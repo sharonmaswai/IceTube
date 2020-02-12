@@ -17,7 +17,7 @@ cryptography==2.7
 cymem==2.0.2
 daphne==2.3.0
 decorator==4.4.0
-Django==1.11
+Django==1.11.28
 django-bootstrap4==0.0.8
 django-daraja==1.1.1
 django-registration==2.4.1
