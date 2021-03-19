@@ -22,7 +22,7 @@ django-bootstrap4==0.0.8
 django-daraja==1.1.1
 django-registration==2.4.1
 django-tinymce==2.8.0
-djangorestframework==3.10.1
+djangorestframework==3.11.2
 future==0.17.1
 hyperlink==19.0.0
 idna==2.8
