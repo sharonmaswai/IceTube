@@ -20,7 +20,7 @@ decorator==4.4.0
 Django==1.11
 django-bootstrap4==0.0.8
 django-daraja==1.1.1
-django-registration==2.4.1
+django-registration==3.1.2
 django-tinymce==2.8.0
 djangorestframework==3.10.1
 future==0.17.1
