@@ -64,7 +64,7 @@ srsly==0.0.7
 thinc==7.0.8
 tqdm==4.32.2
 traitlets==4.3.2
-Twisted==19.2.1
+Twisted==22.2.0
 txaio==18.8.1
 urllib3==1.25.3
 wasabi==0.2.2
